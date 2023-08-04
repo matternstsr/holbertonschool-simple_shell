@@ -4,6 +4,7 @@
 #define SPC_DELIM " \t\n\r"
 #define PATH_DELIM ":"
 #define MAX_LEN 1024
+#define prompt "Shellshocked $"
 
 #include <stdio.h>
 #include <string.h>
@@ -34,7 +35,7 @@ typedef struct builtIn
 
 int st;
 void turtle_cross_road_or_not(char *input, char **argv);
-int turtle_or_not(char *file);
+char *turtle_or_not(char **environ,char *f_name);
 void handle_turtle_interrupt(int sig);
 void __attribute__ ((constructor)) coolIntro(void);
 int empty_turtle_shell(char *input);
@@ -44,5 +45,7 @@ void set_turtle_free_or_not(char **cmdS);
 char *shell_cracked(char **input, char *delim);
 ssize_t feed_the_turtle(const char *prmptStyle, char **input, size_t *len);
 int turtle_surgery(char *input, char **cmdS, char *delim);
+int check_turtle(char *f_name, char *dir_name);
+char *turtle_path(char **envrion);
 
 #endif

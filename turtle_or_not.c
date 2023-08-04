@@ -1,13 +1,31 @@
 #include "shell.h"
 /**
- * turtle_or_not - checks if a file exists or is a turtle fact8
- * @file: The file to be checked.
+ * turtle_or_not - get path, then check_turtle
+ * @environ: Environmental variables
+ * @f_name: The command
  *
- * Return: 0 if the file exists or is a turtle fact, -1 otherwise.
+ * Return: Correct Directory name or NULL
  */
-int turtle_or_not(char *file)
+char *turtle_or_not(char **environ, char *f_name)
 {
-	struct stat buffer;
-
-	return (stat(file, &buffer));
+	char *path;
+	char *dir_name = NULL;
+	char  buf[1024];
+	int turtle;
+	
+	turtle = check_turtle(f_name, dir_name);
+	path = turtle_path(environ);
+	dir_name = getcwd(buf, sizeof(buf));
+	turtle = check_turtle(f_name, dir_name);
+	if (turtle == 1)
+		return (dir_name);
+	dir_name = strsep(&path, ":");
+	while (dir_name != NULL)
+	{
+		turtle = check_turtle(f_name, dir_name);
+		if (turtle == 1)
+			return (dir_name);
+		dir_name = strsep(&path, ":");
+	}
+	return (NULL);
 }

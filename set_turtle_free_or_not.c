@@ -11,7 +11,6 @@ void set_turtle_free_or_not(char **cmdS)
 	int iter = 0;
 
 	for (iter = 0; cmdS[iter]; iter++)
-		cmdS[iter] = NULL;
-	if (*cmdS)
-		free(*cmdS), *cmdS = NULL;
+		free(cmdS[iter]);
+	cmdS = NULL;
 }

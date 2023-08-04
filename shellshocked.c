@@ -21,7 +21,7 @@ int main(void)
 		/**
 		 * * Get input from the user
 		 */
-		prompt_check = feed_the_turtle("# ", &command_line, &command_line_len);
+		prompt_check = feed_the_turtle(prompt, &command_line, &command_line_len);
 		if (prompt_check == -1)
 			free(command_line), exit(0);
 		else if (prompt_check == 1)
@@ -44,8 +44,10 @@ int main(void)
 		 */
 		set_turtle_free_or_not(command_array);
 		if (command_line != NULL)
-			free(command_line), command_line = NULL;
+			command_line = NULL;
 		fflush(stdout);
+		command_line_len = 0;
+		prompt_check = 0;
 	}
 	return (0);
 }
