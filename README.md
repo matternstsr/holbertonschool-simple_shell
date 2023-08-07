@@ -1,9 +1,11 @@
-## Shellshocked - A shockingly good shell
+## [Shellshocked - A shockingly good shell](#projects-title)
+
 # _You have been Shellshocked!_
-![](https://github.com/TravisAdamson/holbertonschool-simple_shell/blob/ed3c9c65ff0cf911db1742f439367f6d0a8b79af/Shellshockedneon.gif)
 
+![Shellshocked](https://github.com/TravisAdamson/holbertonschool-simple_shell/blob/ed3c9c65ff0cf911db1742f439367f6d0a8b79af/Shellshockedneon.gif)
 
-## Description
+## [Description](#project-description)
+
 Shellshocked is a super cool shell program that allows you to execute commands and navigate through your system using a command-line interface. It provides a stylish and interactive shell experience with additional cool features to make your terminal sessions awesome!
 
 ## Table of Contents
