@@ -34,7 +34,7 @@ int main(void)
 		num_char = sleepy_turtle(user_input, bsize);
 		if (num_char == 0)
 		{
-			printf("%s", prompt);
+			printf("%s", "$");
 			num_char2 = getline(&user_input, &bsize, stdin);
 		}
 		if ((num_char  == -1) || (num_char2 == -1))
