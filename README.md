@@ -60,7 +60,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 4. To exit the shell, use the `exit` command.
 
 ## Credits
-Shellshocked is developed and maintained by Cool Developer Name (your-cool-username).
+Shellshocked is developed and maintained by Cool Developer Name (https://github.com/TravisAdamson/holbertonschool-simple_shell/blob/2cf0b1b590dc7a0437caaf17547e5b7920aad63b/AUTHORS).
 
 ## License
 Shellshocked is licensed under the Cool MIT License (https://opensource.org/licenses/MIT).
