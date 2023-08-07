@@ -16,7 +16,6 @@ void turtle_cross_road_or_not(char **in_array, char *dir_name)
 
 	if (dir_name != NULL)
 		d_name = dir_name;
-	printf("d_name = %s\n", d_name);
 	length = strlen(d_name);
 	length1 = strlen(in_array[0]);
 	full_path = malloc(length + length1 + 2);
