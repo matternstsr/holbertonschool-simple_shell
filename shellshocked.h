@@ -13,6 +13,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#define prompt "Shellshocked $"
 
 extern char **environ;
 char *path_name;

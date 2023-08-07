@@ -9,7 +9,8 @@
  */
 int main(void)
 {
-	int num_char = 0, num_char2 = 0;
+	int num_char = 0, atty_check = 0;
+	int fd = fileno(stdin);
 	size_t bsize;
 	char *user_input;
 	char *path;
@@ -31,13 +32,17 @@ int main(void)
 		if (user_input)
 			free(user_input);
 		user_input = malloc(bsize);
-		num_char = sleepy_turtle(user_input, bsize);
-		if (num_char == 0)
+		if (!isatty(fd))
 		{
-			printf("%s", "$");
-			num_char2 = getline(&user_input, &bsize, stdin);
+			num_char = getline(&user_input, &bsize, stdin);
+			atty_check = 1;
 		}
-		if ((num_char  == -1) || (num_char2 == -1))
+		else
+		{
+			printf("%s", prompt);
+			num_char = getline(&user_input, &bsize, stdin);
+		}
+		if (num_char  == -1)
 		{
 			free(user_input);
 			exit(st);
@@ -55,10 +60,13 @@ int main(void)
 		free(in_array);
 		if (dir_name)
 			free(dir_name);
-		if (num_char == 0)
+		if (atty_check != 0)
+		{
+			fflush(stdout);
 			break;
-		num_char2 = 0;
-
+		}
+		num_char = 0;
+		fflush(stdout);
 	}
 	if (user_input)
 		free(user_input);
