@@ -25,7 +25,7 @@ char *turtle_or_not(char *path, char *f_name)
 		return (dir_name);
 	temp_path = strdup(path);
 	free_temp = temp_path;
-	token = strsep(&temp_path, ":");;
+	token = strsep(&temp_path, ":");
 	while (token != NULL)
 	{
 		turtle = check_turtle(f_name, token);
