@@ -1,6 +1,6 @@
 # Shellshocked - A shockingly good shell
 ## _You have been Shellshocked!_
-![](https://github.com/TravisAdamson/holbertonschool-simple_shell/blob/ad4ed1eaa6b0e5c823c563209451dc6cacc5fcaa/README.md)
+![](https://github.com/TravisAdamson/holbertonschool-simple_shell/blob/ed3c9c65ff0cf911db1742f439367f6d0a8b79af/Shellshockedneon.gif)
 
 
 ## Description
