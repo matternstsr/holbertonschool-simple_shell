@@ -68,7 +68,7 @@ int main(void)
 		num_char = 0;
 		fflush(stdout);
 	}
-	if (user_input)
+	if (atty_check == 0)
 		free(user_input);
 	free(path_name);
 	return (0);

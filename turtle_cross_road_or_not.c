@@ -16,17 +16,26 @@ void turtle_cross_road_or_not(char **in_array, char *dir_name)
 
 	if (dir_name != NULL)
 		d_name = dir_name;
-	length = strlen(d_name);
-	length1 = strlen(in_array[0]);
-	full_path = malloc(length + length1 + 2);
-	full_path[0] = '\0';
-	strcat(full_path, d_name);
-	strcat(full_path, "/");
-	strcat(full_path, in_array[0]);
+	if (dir_name[0] != '/')
+	{
+		length = strlen(d_name);
+		length1 = strlen(in_array[0]);
+		full_path = malloc(length + length1 + 2);
+		full_path[0] = '\0';
+		strcat(full_path, d_name);
+		strcat(full_path, "/");
+		strcat(full_path, in_array[0]);
+	}
+	else
+	{
+		full_path = strdup(dir_name);
+	}
 	length = strlen(full_path);
 	full_path[length] = '\0';
 	in_array[0] = strdup(full_path);
 	free(full_path);
+	if (in_array[1][0] != '-')
+		in_array[1] = NULL;
 	launch = fork();
 	if (launch == -1)
 	{

@@ -12,7 +12,7 @@ int turtle_surgery(char *input, char **in_array)
 {
 	int iter = 0;
 	char *cmdT = NULL, *dup = NULL;
-	char *delim = " \t\n\r";
+	char *delim = " ";
 
 	for (dup = input, iter = 0; (cmdT = shell_cracked(&dup, delim)); iter++)
 	{
