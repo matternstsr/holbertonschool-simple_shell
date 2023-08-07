@@ -17,7 +17,7 @@ char *turtle_or_not(char *path, char *f_name)
 	turtle = check_turtle(f_name, dir_name);
 	if (turtle == 1)
 	{
-		return (dir_name);
+		return (f_name);
 	}
 	dir_name = getcwd(buf, sizeof(buf));
 	turtle = check_turtle(f_name, dir_name);
