@@ -12,16 +12,37 @@ Shellshocked is a super cool shell program that allows you to execute commands a
 1. [Project's Title](#shellshocked---a-shockingly-good-shell)
 2. [Project Description](#project-description)
 3. [Table of Contents](#table-of-contents)
-4. [How to Install and Run the Project](#how-to-install-and-run-the-project)
-5. [How to Use the Project](#how-to-use-the-project)
-6. [Credits](#credits)
-7. [License](#license)
-8. [How to Contribute to the Project](#how-to-contribute-to-the-project)
-9. [Tests](#tests)
-10. [Include the GCC Used and Why](#include-the-gcc-used-and-why)
-11. [Valgrind for Memory Leak Check](#valgrind-for-memory-leak-check)
-12. [Show Examples of What It Does and the Features It Has](#show-examples-of-what-it-does-and-the-features-it-has)
-13. [The Shell Can Run Any Command Specified by the User](#the-shell-can-run-any-command-specified-by-the-user)
+4. [Main Components](#main-components)
+5. [How to Install and Run the Project](#how-to-install-and-run-the-project)
+6. [How to Use the Project](#how-to-use-the-project)
+7. [Credits](#credits)
+8. [License](#license)
+9. [How to Contribute to the Project](#how-to-contribute-to-the-project)
+10. [Tests](#tests)
+11. [Include the GCC Used and Why](#include-the-gcc-used-and-why)
+12. [Valgrind for Memory Leak Check](#valgrind-for-memory-leak-check)
+13. [Show Examples of What It Does and the Features It Has](#show-examples-of-what-it-does-and-the-features-it-has)
+14. [The Shell Can Run Any Command Specified by the User](#the-shell-can-run-any-command-specified-by-the-user)
+
+## Main Components
+
+1. `check_turtle`: This function checks whether a given file and/or directory exist. It returns -1 if the file doesn't exist, 0 if the directory doesn't exist, and 1 if both file and directory exist.
+
+2. `shell_cracked`: This function is used for tokenizing the input string based on the specified delimiter(s). It returns the first token of the input.
+
+3. `main`: The main function of the shell program. It runs in a loop, reading user input, parsing it, and executing commands. The user input is tokenized, and the command is executed with its arguments using `execve`. The `turtle_or_not` function is used to determine the correct directory path for the command to be executed.
+
+4. `sleepy_turtle`: This function is used to read user input from the terminal. It reads characters from the standard input if the shell is running interactively.
+
+5. `turtle_cross_road_or_not`: This function is responsible for launching the input command with its arguments as a child process using `fork` and `execve`.
+
+6. `turtle_or_not`: This function checks if a given command exists in the current working directory or any of the directories listed in the PATH environment variable. It uses the `check_turtle` function to check for file existence.
+
+7. `turtle_path`: This function extracts the value of the PATH environment variable.
+
+8. `turtle_pen`: This function prints out all environmental variables.
+
+9. `The header file `shellshocked.h` defines function prototypes and includes necessary header files.
 
 ## How to Install and Run the Project
 1. Clone the repository to your local machine.
@@ -68,7 +89,7 @@ Example 1: Running basic commands
 $ ls
 check_run.c README.md shellshocked.h turtle_path.c
 
-Example 2: Running ls with flags
+Example 2: Running `ls` with flags
 $ ls -la
 total 56
 drwxr-xr-x 2 root root 328 Aug 7 07:41 .
