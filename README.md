@@ -1,7 +1,7 @@
-# Shellshocked - A Cool Shell
+# Shellshocked - A shockingly good shell
+## _You have been Shellshocked!_
+![](https://github.com/TravisAdamson/holbertonschool-simple_shell/blob/ad4ed1eaa6b0e5c823c563209451dc6cacc5fcaa/README.md)
 
-Your Shellshocked Logo Goes Here
-[![Awesome Badge](https://your-awesome-badge-link-here)]
 
 ## Description
 Shellshocked is a super cool shell program that allows you to execute commands and navigate through your system using a command-line interface. It provides a stylish and interactive shell experience with additional cool features to make your terminal sessions awesome!
@@ -14,14 +14,12 @@ Shellshocked is a super cool shell program that allows you to execute commands a
 5. [How to Use the Project](#how-to-use-the-project)
 6. [Credits](#credits)
 7. [License](#license)
-8. [Badges](#badges)
-9. [How to Contribute to the Project](#how-to-contribute-to-the-project)
-10. [Tests](#tests)
-11. [Include the GCC Used and Why](#include-the-gcc-used-and-why)
-12. [Valgrind for Memory Leak Check](#valgrind-for-memory-leak-check)
-13. [Show Examples of What It Does and the Features It Has](#show-examples-of-what-it-does-and-the-features-it-has)
-14. [The Shell Can Run Any Command Specified by the User](#the-shell-can-run-any-command-specified-by-the-user)
-
+8. [How to Contribute to the Project](#how-to-contribute-to-the-project)
+9. [Tests](#tests)
+10. [Include the GCC Used and Why](#include-the-gcc-used-and-why)
+11. [Valgrind for Memory Leak Check](#valgrind-for-memory-leak-check)
+12. [Show Examples of What It Does and the Features It Has](#show-examples-of-what-it-does-and-the-features-it-has)
+13. [The Shell Can Run Any Command Specified by the User](#the-shell-can-run-any-command-specified-by-the-user)
 ## How to Install and Run the Project
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
@@ -114,4 +112,5 @@ Copy code
 You can run any cool command in the cool shell by providing its full path or if the command is in the PATH directory, you can just type the command name and press Enter. The cool shell will take care of the rest!
 
 Enjoy the cool shell and have a blast with your terminal adventures! Happy hacking!
+
 
