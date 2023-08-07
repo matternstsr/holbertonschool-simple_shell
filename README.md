@@ -7,7 +7,7 @@
 Shellshocked is a super cool shell program that allows you to execute commands and navigate through your system using a command-line interface. It provides a stylish and interactive shell experience with additional cool features to make your terminal sessions awesome!
 
 ## Table of Contents
-1. [Project's Title](#projects-title)
+1. [Project's Title](#projects-Shellshocked)
 2. [Project Description](#project-description)
 3. [Table of Contents](#table-of-contents)
 4. [How to Install and Run the Project](#how-to-install-and-run-the-project)
