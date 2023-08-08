@@ -9,7 +9,7 @@
  */
 int check_turtle(char *f_name, char *dir_name) 
 {
-	char *path_name; 
+	char *path_name;
 	struct stat stat_buf;
 	int stat_result;
 	char *temp_dir;
@@ -34,7 +34,7 @@ int check_turtle(char *f_name, char *dir_name)
 	if (access(dir_name, F_OK) != 0)
 	{
 		free(temp_dir);
-		free(temp_f); 	       
+		free(temp_f);
 		return (0);
 	}
 	path_name = malloc(strlen(temp_dir) + strlen(temp_f) + 2);

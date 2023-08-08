@@ -10,7 +10,7 @@
 int sleepy_turtle(char *user_input, size_t bsize)
 {
 	int num_char = 0;
-	
+
 	if (isatty(STDIN_FILENO))
 	{
 		num_char = read(STDIN_FILENO, user_input, bsize);
