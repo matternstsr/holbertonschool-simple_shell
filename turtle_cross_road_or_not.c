@@ -25,6 +25,7 @@ void turtle_cross_road_or_not(char **in_array, char *dir_name)
 	full_path[length] = '\0';
 	in_array[0] = strdup(full_path);
 	free(full_path);
+	free(dir_name);
 	launch_turtle(in_array);
 }
 
@@ -54,5 +55,4 @@ void launch_turtle(char **in_array)
 	}
 	else
 		wait(&status);
-	free(in_array[0]);
 }
