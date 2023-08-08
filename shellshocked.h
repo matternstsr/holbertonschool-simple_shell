@@ -33,4 +33,7 @@ char *shell_cracked(char **input, char *delim);
 void set_turtle_free_or_not(char **cmdS);
 int sleepy_turtle(char *user_input, size_t bsize);
 void turtle_pen(char **environ);
+int turtle_size(char *input);
+void shell_cracked2(char **input, char *delim);
+void launch_turtle(char **in_array);
 #endif
