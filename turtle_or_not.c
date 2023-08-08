@@ -15,7 +15,6 @@ char *turtle_or_not(char *path, char *f_name)
 	int turtle;
 	
 	turtle = check_turtle(f_name, dir_name);
-	printf("turtle = %d\n", turtle);
 	if (turtle == 1)
 	{
 		return ("end_it_all");
