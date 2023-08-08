@@ -2,30 +2,18 @@
 
 /**
  * main - Generates a simple shell
- * @argc: Number of arguements given
- * @argv: The arguements given
  *
  * Return: 0 on success
  */
 int main(void)
 {
 	int num_char = 0, atty_check = 0, in_array_size = 0;
-	int fd = fileno(stdin);
-	size_t bsize;
-	char *user_input;
-	char *path;
-	char *dir_name = NULL;
-	int st = 0, count = 0;
+	int fd = fileno(stdin), st = 0, count = 0;
+	size_t bsize = 1024;
+	char *user_input, *path = NULL, *dir_name = NULL;
 	char **in_array = NULL;
 
-	bsize = 1024;
-	path = NULL;
 	user_input = malloc(bsize);
-	if (user_input == NULL)
-	{
-		perror("Your memory is shellshocked, unable to continue");
-		exit(1);
-	}
 	path = turtle_path(environ);
 	while (1)
 	{
@@ -58,16 +46,12 @@ int main(void)
 		if (dir_name != NULL)
 		{
 			if (dir_name[0] == 'e')
-			{
 				launch_turtle(in_array);
-			}
 			else
 				turtle_cross_road_or_not(in_array, dir_name);
 		}
 		st = 2;
-		count--;
-		count--;
-		count--;
+		count = count - 3;
 		while (count >= 0)
 		{
 			if (in_array[count])
