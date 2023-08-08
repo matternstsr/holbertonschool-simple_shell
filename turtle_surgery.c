@@ -2,8 +2,7 @@
 /**
  * turtle_surgery - parses/tokenizes input into string vector
  * @input: object string
- * @cmdS: destination string vector
- * @delim: delimiter to be fed to splitting/tokenizing function
+ * @in_array: array to store input tokens
  *
  * Return: 0 if input parsed to cmdS, -1 otherwise
  */
@@ -48,14 +47,14 @@ int turtle_surgery(char *input, char **in_array)
 
 int turtle_size(char *input)
 {
-        int index;
-        char *input_copy, *copy_copy;
-        char *delim2 = " \t\n\r";
+	int index;
+	char *input_copy, *copy_copy;
+	char *delim2 = " \t\n\r";
 
-        input_copy = strdup(input);
+	input_copy = strdup(input);
 	copy_copy = input_copy;
 	for (index = 0; input_copy != NULL;  index++)
 		shell_cracked2(&input_copy, delim2);
-        free(copy_copy);
+	free(copy_copy);
 	return (index);
 }

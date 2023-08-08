@@ -66,9 +66,11 @@ int main(void)
 		}
 		st = 2;
 		count--;
+		count--;
+		count--;
 		while (count >= 0)
 		{
-			if (in_array[count] != NULL)
+			if (in_array[count])
 				free(in_array[count]);
 			count--;
 		}

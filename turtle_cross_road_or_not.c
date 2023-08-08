@@ -2,8 +2,8 @@
 
 /**
  * turtle_cross_road_or_not - launches input command with its arguments
- * @input: The command to be executed.
- * @argv: The arguments to the command.
+ * @in_array: The command to be executed.
+ * @dir_name: The command.
  * Return: void
  */
 void turtle_cross_road_or_not(char **in_array, char *dir_name)
@@ -34,13 +34,13 @@ void turtle_cross_road_or_not(char **in_array, char *dir_name)
  * @in_array: Given input
  *
  * Return: No Return
- */	
+ */
 void launch_turtle(char **in_array)
 {
 	pid_t launch = 0;
 	char **envp = NULL;
 	int status = 0;
-	
+
 	launch = fork();
 	if (launch == -1)
 	{
