@@ -13,7 +13,7 @@ int main(void)
 	int fd = fileno(stdin);
 	size_t bsize;
 	char *user_input;
-	char *path, *test_var = "end_it_all";
+	char *path;
 	char *dir_name = NULL;
 	int st = 0, count = 0;
 	char **in_array = NULL;
@@ -55,15 +55,12 @@ int main(void)
 			continue;
 		}
 		dir_name = turtle_or_not(path, in_array[0]);
-		printf("dir_name = %s\n", dir_name);
-		if (dir_name == test_var)
+		if (dir_name[0] == 'e')
 			launch_turtle(in_array);
 		else if (dir_name != NULL)
 			turtle_cross_road_or_not(in_array, dir_name);
 		st = 2;
 		free(in_array);
-		if (dir_name)
-			free(dir_name);
 		if (atty_check != 0)
 		{
 			fflush(stdout);
