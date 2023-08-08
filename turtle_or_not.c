@@ -38,7 +38,6 @@ char *turtle_or_not(char *path, char *f_name)
 		}
 		token = strsep(&temp_path, ":");
 	}
-	if (temp_path)
-		free(free_temp);
+	free(free_temp);
 	return (NULL);
 }

@@ -59,8 +59,6 @@ int main(void)
 		{
 			if (dir_name[0] == 'e')
 			{
-				free(dir_name);
-				free(user_input);
 				launch_turtle(in_array);
 			}
 		}
@@ -71,13 +69,16 @@ int main(void)
 		if (atty_check != 0)
 		{
 			fflush(stdout);
+			free(dir_name);
 			break;
 		}
 		num_char = 0;
+		free(dir_name);
 		fflush(stdout);
 	}
 	if (atty_check == 0)
 		free(user_input);
 	free(path_name);
+	free(user_input);
 	return (0);
 }
