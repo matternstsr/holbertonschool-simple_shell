@@ -17,8 +17,7 @@ int main(void)
 	path = turtle_path(environ);
 	while (1)
 	{
-		if (user_input)
-			free(user_input);
+		free(user_input);
 		user_input = malloc(bsize);
 		if (!isatty(fd))
 		{
@@ -51,13 +50,8 @@ int main(void)
 				turtle_cross_road_or_not(in_array, dir_name);
 		}
 		st = 2;
-		count = count - 3;
-		while (count >= 0)
-		{
-			if (in_array[count])
-				free(in_array[count]);
-			count--;
-		}
+		free(user_input);
+		free(in_array[0]);
 		free(in_array);
 		if (atty_check != 0)
 		{
@@ -67,7 +61,6 @@ int main(void)
 		num_char = 0;
 		fflush(stdout);
 	}
-	free(user_input);
 	free(path_name);
 	return (0);
 }
