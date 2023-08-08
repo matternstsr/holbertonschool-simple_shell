@@ -55,15 +55,16 @@ int main(void)
 			continue;
 		}
 		dir_name = turtle_or_not(path, in_array[0]);
+		printf("dir_name = %s\n", dir_name);
 		if (dir_name != NULL)
 		{
 			if (dir_name[0] == 'e')
 			{
 				launch_turtle(in_array);
 			}
+			else
+				turtle_cross_road_or_not(in_array, dir_name);
 		}
-		else if (dir_name != NULL)
-			turtle_cross_road_or_not(in_array, dir_name);
 		st = 2;
 		free(in_array);
 		if (atty_check != 0)

@@ -16,6 +16,7 @@ int check_turtle(char *f_name, char *dir_name)
 	char *temp_f;
 
 	temp_f = strdup(f_name);
+	printf("dir_name = %s\n", dir_name);
 	if (dir_name == NULL)
 	{
 		stat_result = stat(temp_f, &stat_buf);
@@ -41,6 +42,7 @@ int check_turtle(char *f_name, char *dir_name)
 	strcpy(path_name, dir_name);
 	strcat(path_name, "/");
 	strcat(path_name, f_name);
+	printf("path_name = %s\n", path_name);
 	stat_result = stat(path_name, &stat_buf);
 	if (stat_result != 0)
 	{
